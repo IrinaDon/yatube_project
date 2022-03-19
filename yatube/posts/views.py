@@ -1,14 +1,11 @@
-from django.http import HttpResponse
-# Импортируем загрузчик.
-from django.template import loader
-
-
-def index(request):
-    # Загружаем шаблон;
-    # шаблоны обычно хранят в отдельной директории.
+from django.shortcuts import render
+​
+# Главная страница
+def index(request):    
     template = 'posts/index.html'
-    # Формируем шаблон
     return render(request, template)
-
-def group_posts (reguest, any_slug)   
-    return HttpResponse ('posts, filtered by groups') 
+​
+# Страницы сообществ 
+def group_list(request):
+    template = 'posts/group_list.html'
+    return render(request, template)
