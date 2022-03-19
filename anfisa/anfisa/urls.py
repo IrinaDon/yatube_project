@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+path('', include('ice_cream.urls')),
+
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
